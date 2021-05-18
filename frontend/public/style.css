@@ -1,0 +1,58 @@
+.body-bg{
+  position: relative;
+  background: fixed url(https://img1.akspic.ru/originals/6/6/2/3/63266-mstiteli_beskonechnaya_vojna-zheleznyj_chelovek-altron-mstitel-film-1920x1080.jpg)  
+}
+.body-bg::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.3);
+  z-index: 2;
+}
+.inner {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+}
+.my-nav{
+  color: white;
+  border-bottom: 3px solid white;
+  transition: all 0.5s;
+}
+.my-nav:hover{
+  color: white;
+  background-color: rgba(255, 186, 121, 0.6);;
+}
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+
+.dropdown-menu li{
+  position: relative;
+}
+.dropdown-menu .submenu{ 
+  display: none;
+  position: absolute;
+  left:100%; top:-7px;
+}
+.dropdown-menu .submenu-left{ 
+  right:100%; left:auto;
+}
+
+.dropdown-menu > li:hover{ background-color: #f1f1f1 }
+.dropdown-menu > li:hover > .submenu{
+  display: block;
+}
+}	
+/* ============ desktop view .end// ============ */
+
+/* ============ small devices ============ */
+@media (max-width: 991px) {
+
+.dropdown-menu .dropdown-menu{
+  margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+}
+
+}	
